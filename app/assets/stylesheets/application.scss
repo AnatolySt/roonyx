@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap";
+
+#sales table {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.total-revenue {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 20px 0;
+}

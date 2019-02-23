@@ -1,0 +1,13 @@
+= form_with url: refresh_sales_path, method: :get, class: 'total-revenue' do |form|
+  .form-group
+    = form.label :from, 'From'
+    = form.date_field :from, class: 'form-control'
+  .form-group
+    = form.label :to, 'To'
+    = form.date_field :to, class: 'form-control'
+
+  = form.submit 'Отправить', class: 'btn btn-primary'
+
+= render 'table', goods: @goods, start_date: @default_date, end_date: @default_date
+
+

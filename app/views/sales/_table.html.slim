@@ -1,0 +1,9 @@
+#sales
+  table.table
+    tr
+      td Good
+      td = "#{start_date} - #{end_date}"
+    - goods.each do |good|
+      tr
+        td = good.title
+        td = good.revenue(start_date, end_date)
