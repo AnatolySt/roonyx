@@ -16,13 +16,19 @@
 
 @import "bootstrap";
 
-#sales table {
+#page-container {
   max-width: 960px;
   margin: 0 auto;
 }
 
 .total-revenue {
-  max-width: 360px;
-  margin: 0 auto;
   padding: 20px 0;
+  float: right;
+}
+
+.logo {
+  display: inline-block;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 24px;
 }

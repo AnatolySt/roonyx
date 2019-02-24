@@ -2,6 +2,7 @@ class SalesController < ApplicationController
 
   before_action :set_goods
   before_action :sales_params, only: [:index, :refresh]
+  before_action :set_json_response_format, only: [:index]
 
   def index
   end
@@ -26,6 +27,10 @@ class SalesController < ApplicationController
     else
       render json: { error: 'You must set start and end dates!' }, status: 422
     end
+  end
+
+  def set_json_response_format
+    request.format = :json
   end
 
 end
