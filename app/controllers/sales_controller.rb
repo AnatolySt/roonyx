@@ -20,8 +20,12 @@ class SalesController < ApplicationController
   end
 
   def sales_params
-    @start_date = params[:from]
-    @end_date = params[:to]
+    if params.has_key?(:from) && params.has_key?(:to)
+      @start_date = params[:from]
+      @end_date = params[:to]
+    else
+      render json: { error: 'You must set start and end dates!' }, status: 422
+    end
   end
 
 end
