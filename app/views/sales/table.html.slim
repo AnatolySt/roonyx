@@ -1,0 +1,14 @@
+#page-container
+  .logo REVENUE
+  = form_with url: refresh_sales_path, method: :get, class: 'total-revenue form-inline' do |form|
+    = form.label :from, 'From', class: 'mb-2 mr-sm-2'
+    = form.date_field :from, class: 'form-control mb-2 mr-sm-2'
+
+    = form.label :to, 'To', class: 'mb-2 mr-sm-2'
+    = form.date_field :to, class: 'form-control mb-2 mr-sm-2'
+
+    = form.submit 'Refresh', class: 'btn btn-primary mb-2 mr-sm-2'
+
+  = render 'table', goods: @goods, start_date: @default_date, end_date: @default_date
+
+

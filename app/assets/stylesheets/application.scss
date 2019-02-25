@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap";
+
+#page-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.total-revenue {
+  padding: 20px 0;
+  float: right;
+}
+
+.logo {
+  display: inline-block;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 24px;
+}
